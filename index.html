@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Completa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <input type="checkbox" id="open-menu" class="header__checkbox" />
+      <label for="open-menu" class="header__open-nav-button" role="button"
+        >=</label
+      >
+
+      <div class="header__logo-container">
+        <img
+          class="header__logo"
+          src="IMAGENES/ronaldlogojpg.png"
+          alt="simbolor R"
+        />
+      </div>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="#profile">Acerca De</a></li>
+          <li class="header__nav-item">
+            <a href="#info">Desarrollo Profesional</a>
+          </li>
+          <li class="header__nav-item"><a href="#portfolio">Portafolio</a></li>
+          <li class="header__nav-item"><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="profile" id="profile">
+      <div class="profile__wrapper">
+        <div class="profile__img-container">
+          <img
+            src="IMAGENES/ronaldhd2.jpg"
+            class="profile__img"
+            alt="Foto de Perfil"
+          />
+        </div>
+        <div class="profile__data-container">
+          <div class="profile__data">
+            <div class="profile__description">
+              <h1>Ronlado Stiven Franco Duran</h1>
+              <p class="profesion">Desarrollador de Software</p>
+              <p class="description">
+                Desarrollador de software en formación con experiencia en
+                soporte técnico y manejo de entornos tecnológicos. Competente en
+                desarrollo Front-End, bases de datos SQL, control de versiones
+                con Git y fundamentos de desarrollo móvil. Destaco por mi
+                pensamiento crítico, adaptabilidad y capacidad para resolver
+                problemas bajo presión. Comprometido con el aprendizaje continuo
+                y la creación de soluciones digitales eficientes.
+              </p>
+            </div>
+            <div class="profile__skills-container">
+              <h2>Habilidades Técnicas</h2>
+              <ul>
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--80">80%</div>
+                  </div>
+                  <span class="profile__skill-name">HTML</span>
+                </li>
+
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--80">80%</div>
+                  </div>
+                  <span class="profile__skill-name">CSS</span>
+                </li>
+
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--65">65%</div>
+                  </div>
+                  <span class="profile__skill-name">JS</span>
+                </li>
+
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--30">30%</div>
+                  </div>
+                  <span class="profile__skill-name">PYTHON</span>
+                </li>
+
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--65">65%</div>
+                  </div>
+                  <span class="profile__skill-name">SQL</span>
+                </li>
+
+                <li class="profile__skill">
+                  <div class="load-bar">
+                    <div class="load-bar__bar bar--75">75%</div>
+                  </div>
+                  <span class="profile__skill-name">GIT</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="experience__section" id="info">
+      <div class="profile__xp-container">
+        <h2 class="xp__title">Experiencia Laboral</h2>
+
+        <br />
+
+        <div class="work">
+          <h3 class="work__title">Tecnico Sistemas, Distriagro DG S.A.S</h3>
+
+          <p class="container__details">2023-09-06 | 2024-03-06</p>
+          <p class="container__details">
+            Responsable del soporte técnico, mantenimiento preventivo y
+            correctivo de equipos, resolución de problemas informáticos y
+            configuración de sistemas operativos.
+          </p>
+        </div>
+        <br />
+      </div>
+
+      <div class="profile__xp-container">
+        <h2 class="xp__title">Educación</h2>
+
+        <br />
+
+        <div class="work">
+          <h3 class="work__title">Servicio Nacional de Aprendizaje</h3>
+
+          <p class="container__details">2022-02-01 | 2024-03-06</p>
+          <p class="container__details">
+            Formación técnica integral en sistemas de información.
+          </p>
+        </div>
+
+        <br />
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <h2 class="portfolio__title">Portafolio Web</h2>
+      <div class="portfolio__project-container">
+        <div class="portfolio__project">
+          <a class="portfolio__project-name" href="./CALCULADORA/index.html"
+            >Calculadora</a
+          >
+        </div>
+        <div class="portfolio__project">
+          <a
+            class="portfolio__project-name"
+            href="./TABLA_AMORTIZACIÓN/index.html"
+            >Tabla Amortización</a
+          >
+        </div>
+        <div class="portfolio__project">
+          <a
+            class="portfolio__project-name"
+            href="./GESTOR_DE_PERSONAS/pagina.php"
+            >Gestor de Personas</a
+          >
+        </div>
+        <div class="portfolio__project">
+          <a class="portfolio__project-name" href="#">Project</a>
+        </div>
+        <div class="portfolio__project">
+          <a class="portfolio__project-name" href="#">Project</a>
+        </div>
+        <div class="portfolio__project">
+          <a class="portfolio__project-name" href="#">Project</a>
+        </div>
+      </div>
+    </section>
+    <section class="form" id="contact">
+      <h2 class="form__title">Contact</h2>
+      <form class="form__form" method="post">
+        <div class="form__input-container">
+          <label>
+            Nombre
+            <input type="text" name="nombre" placeholder="John" />
+          </label>
+        </div>
+
+        <div class="form__input-container">
+          <label>
+            Apellido
+            <input type="text" name="apellido" placeholder="Doe" />
+          </label>
+        </div>
+
+        <div class="form__input-container">
+          <label>
+            Mail
+            <input type="email" name="mail" placeholder="mail@example.com" />
+          </label>
+        </div>
+
+        <div class="form__input-container">
+          <label>
+            Mensaje
+            <textarea name="mensaje" placeholder="Your message"></textarea>
+          </label>
+        </div>
+
+        <div class="form__input-container">
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+    </section>
+    <footer><strong>RONALD F </strong>- Copyright</footer>
+  </body>
+</html>
