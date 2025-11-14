@@ -15,31 +15,35 @@ body, div, ul, nav, header, footer, a, li, label {
     padding: 0;
 }
 
-/*--------HEADER SECTION*/
-
 .header {
-    background-color:  #FFF;
+    background: linear-gradient(to right, #FFFFFF, #F8FAFF);
     display: flex;
     justify-content: space-between;
     align-items: center;
     container-type: inline-size;
     container-name: header;
-    position: relative;
-    z-index: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     text-align: center;
     font-size: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .header__open-nav-button {
-    color: #48E;
+    color: #4488EE;
     font-size: 3rem;
-    font-weight: 600px;
+    font-weight: 600;
     position: absolute;
     right: 10px;
-    z-index: 20; 
+    z-index: 200; 
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
+.header__open-nav-button:hover {
+    color: #2266CC;
+}
 
 .header__checkbox{
     display: none;
@@ -52,7 +56,7 @@ body, div, ul, nav, header, footer, a, li, label {
     height: 100vh;
     width: 100vw;
     top: 0;
-    z-index: 10;
+    z-index: 150;
 }
 
 .header__nav-list{
@@ -69,7 +73,7 @@ body, div, ul, nav, header, footer, a, li, label {
 
 .header__logo-container {
     position: relative;
-    z-index: 20;
+    z-index: 200;
 }
 
 .header__logo {
@@ -83,14 +87,18 @@ body, div, ul, nav, header, footer, a, li, label {
 }
 
 .header__nav-item a {
-    color: #48E;
+    color: #4488EE;
     text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-.header__nav-item :is(:hover,:active){
-    text-decoration: underline;
+.header__nav-item a:hover {
+    color: #2266CC;
+    background-color: #E2EAFF;
 }
-
 
 /*--------HEADER QUERIES*/
 
@@ -117,14 +125,14 @@ body, div, ul, nav, header, footer, a, li, label {
     }
 }
 
+
 /*-------- HEADER ENDS----------*/
-
-
 /*------- PROFILE SECTION------*/
 
 .profile {
     container-name: profile;
     container-type: inline-size;
+    padding: 20px;
 }
 
 .profile__wrapper {
@@ -134,82 +142,113 @@ body, div, ul, nav, header, footer, a, li, label {
     background-color: #FFF;
     max-width: 1400px;
     height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .profile__data-container {
-    max-width: 600px;
-    padding: 20px;
-
+    max-width: 100%;
+    padding: 30px;
 }
 
 .profile__description{
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-bottom: 30px;
 }
 
 .profile__description h1{
-    font-size: 30px;
+    font-size: 2.2rem;
+    color: #2266AA;
+    margin-bottom: 10px;
+    line-height: 1.2;
 }
 
 .profile__img-container {
-    max-height: 500px;
+    width: 100%;
+    height: 350px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile__img {
-    max-width: 100%;
-    width: 600px;
-}
-
-h1 {
-    color: #26A;
-    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 .profesion {
-    margin: 0;
-    font-weight: bold;
-    color: #4F4F4F;
-    font-size: 22px;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    color: #4488EE;
+    font-size: 1.4rem;
 }
 
 .description {
-  text-align: justify;
+    text-align: justify;
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
 }
 
 .profile__skills-container h2 {
-    color: #26A;
+    color: #2266AA;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.skills-category {
+    margin-bottom: 25px;
+}
+
+.category-title {
+    color: #4488EE;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #E2EAFF;
 }
 
 .profile__skill {
     list-style: none;
     display: flex;
     align-items: center;
-    margin: 10px;
-    max-width: 600px;
-    margin-left: 0;
-}
-
-.load-bar {
-    border:  2px solid #48E;
-    border-radius: 8px;
-    color: #FFF;
-    padding: 2px;
-    font-size: 12px;
-    width: 80%;
-    margin: 4px;
-    margin-left: 0;
+    margin: 10px 0;
+    max-width: 100%;
+    gap: 12px;
 }
 
 .profile__skill-name {
-    color: #48E;
+    color: #333;
+    font-weight: 500;
+    min-width: 85px;
+    font-size: 1rem;
+}
+
+.load-bar {
+    border: 2px solid #4488EE;
+    border-radius: 10px;
+    color: #FFF;
+    padding: 2px;
+    font-size: 11px;
+    width: 100%;
+    background-color: #F0F4FF;
 }
 
 .load-bar__bar {
-    background-color: #48E;
-    border-radius: 4px;
-    padding: 4px 6px;
+    background: linear-gradient(90deg, #4488EE, #6BA3FF);
+    border-radius: 7px;
+    padding: 5px 7px;
+    text-align: center;
+    font-weight: 600;
+    transition: width 0.5s ease;
 }
 
 .bar--80 {
@@ -232,33 +271,63 @@ h1 {
     width: 60%;
 }
 
-.bar--90 {
-    width: 90%;
+.bar--55 {
+    width: 55%;
+}
+
+.bar--50 {
+    width: 50%;
 }
 
 /*------- PROFILE QUERIES------*/
 
-@container profile (min-width: 610px ){
+@container profile (min-width: 600px ){
+    .profile__img-container {
+        height: 400px;
+    }
+    
+    .profile__description h1{
+        font-size: 2.5rem;
+    }
+    
+    .profesion {
+        font-size: 1.5rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+    }
+    
+    .profile__skill-name {
+        font-size: 1.05rem;
+    }
+    
+    .category-title {
+        font-size: 1.2rem;
+    }
+}
+
+@container profile (min-width: 850px ){
     .profile__wrapper {
         flex-direction: row;
-        padding: 20px;
         background-color: transparent;
-        height: 120vh;
-        margin: auto;
+        min-height: 100vh;
+        align-items: stretch;
     }
 
     .profile__data-container{
         background-color: #FFF;
         display: flex;
         align-items: center;
-        border-radius: 0 25px 25px 0;
-        box-shadow: 0px 0px 9px  #0002;
+        border-radius: 0 15px 15px 0;
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        max-width: 650px;
     }
 
-    h1 {
+    .profile__description h1 {
         margin-top: 0;
-        padding-top: 50px;
-        font-size: 3rem;
+        font-size: 4.8rem;
         text-wrap: balance;
     }
 
@@ -267,104 +336,158 @@ h1 {
     }
 
     .profile__img-container {
-        max-height: initial;
-        border-radius: 25px 0 0 25px;
+        height: auto;
+        min-height: 100vh;
+        border-radius: 15px 0 0 15px;
+        flex: 1;
+        max-width: 50%;
     }
 
     .profile__img {
         height: 100%;
         object-fit: cover;
-        width: 620px;
+        width: 100%;
+    }
+    
+    .profile__skill {
+        gap: 15px;
+    }
+    
+    .profile__skill-name {
+        min-width: 95px;
+        font-size: 1.05rem;
+    }
+    
+    .profile__skills-container h2 {
+        font-size: 1.7rem;
+    }
+    
+    .category-title {
+        font-size: 1.25rem;
+    }
+    
+    .description {
+        font-size: 2.1rem;
     }
 }
 
-/*------- PROFILE ENDS------*/
+@container profile (min-width: 1100px ){
+    .profile__description h1 {
+        font-size: 3.2rem;
+    }
+    
+    .profesion {
+        font-size: 1.6rem;
+    }
+    
+    .description {
+        font-size: 1.15rem;
+    }
+}
+
+/*---- PROFILE END------*/
 
 /*------- EXPERIENCE SECTION -----*/
 
 .experience__section {
-    background-color: #f0f4f8;
+    background: linear-gradient(135deg, #f8f9fc 0%, #e9ecf5 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: start;
     justify-content: flex-start;
-    padding: 50px 80px;
+    padding: 60px 80px;
     gap: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-left: 5px solid #48E;
-    border-top-left-radius:5px ;
-    border-bottom-left-radius:5px ;
-
 }
 
 .profile__xp-container {
     background-color: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform .2s ease;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #4488EE;
+    transition: all 0.3s ease;
 }
 
 .profile__xp-container:hover {
-    transform: translateY(-3px);
-    border: 1px solid rgb(115, 170, 253);
+    transform: translateX(5px);
+    box-shadow: 0 6px 30px rgba(68, 136, 238, 0.15);
 }
 
 .work {
-    border-left: 4px solid #6db1ff;
-    margin-bottom: 18px;
-    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-left: 15px;
 }
 
 .xp__title {
-    color: #1e3a5f;
-    font-weight: bold;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+    color: #2266AA;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     display: inline-block;
-    border-bottom: 4px solid #e0f542;
-    border-radius:2px;
+    position: relative;
+}
+
+.xp__title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4488EE, #6BA3FF);
+    border-radius: 2px;
 }
 
 .work__title {
-    color: #0009;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.work__company {
+    color: #4488EE;
     font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .container__details {
-    color: #000;
-    font-size: .9rem;
-    line-height: 1.4rem;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 
-/*------- EXPERIENCE QUIERIES -----*/
+/*------- EXPERIENCE QUERIES -----*/
 
 @media (max-width: 992px) {
     .experience__section {
-        padding: 40px 50px;
+        padding: 50px 50px;
     }
 }
 
 @media (max-width: 768px) {
     .experience__section {
-        padding: 30px 35px;
+        padding: 40px 35px;
     }
 
     .xp__title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .work__title {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 576px) {
     .experience__section {
-        padding: 25px 20px;
-        gap: 25px;
+        padding: 30px 20px;
+        gap: 30px;
     }
 
     .profile__xp-container {
@@ -372,24 +495,9 @@ h1 {
     }
 
     .xp__title {
-        font-size: 1.1rem;
-    }
-
-    .container__details {
-        font-size: .85rem;
+        font-size: 1.3rem;
     }
 }
-
-@media (max-width: 400px) {
-    .experience__section {
-        padding: 20px 15px;
-    }
-
-    .container__details {
-        font-size: .8rem;
-    }
-}
-
 /*------- EXPERIENCE END -----*/
 
 /*------- PORTFOLIO SECTION------*/
